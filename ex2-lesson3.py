@@ -17,7 +17,7 @@ contacts = {
 }
 
 for contact,values in contacts.items():
-		print "{0}'s contact information is:" "\n" "\t" .format(contact) + "Phone:" + ' ' + values.values()[0] + "\n" "\t"  "Twitter:" + ' ' + values.values()[1] + "\n" "\t"  "GitHub:" + ' ' + values.values()[2] 
+		print "\n" "\t" "{0}'s contact information is:" "\n" "\t" .format(contact) + "Phone:" + ' ' + values.values()[0] + "\n" "\t"  "Twitter:" + ' ' + values.values()[1] + "\n" "\t"  "GitHub:" + ' ' + values.values()[2] 
 
 
 
