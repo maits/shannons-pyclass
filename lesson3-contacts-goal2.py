@@ -40,4 +40,4 @@ for contact,values in contacts.items():
 		print '</tr>'
 		print '</table>'
 
-
+#I'm sure there's an easier, better way of doing this but couldn't figure it out. Need to ask Shannon.
