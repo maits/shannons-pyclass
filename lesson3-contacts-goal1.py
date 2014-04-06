@@ -4,12 +4,6 @@
 
 # Background: You have a dictionary with people's contact information.  You want to display that information as an HTML table.
 
-contacts = {
-    'Shannon': {'phone': '202-555-1234', 'twitter': '@svt827', 'github': '@shannonturner' }, 
-    'Beyonce': {'phone': '303-404-9876', 'twitter': '@beyonce', 'github': '@bey'},
-    'Tegan and Sara': {'phone': '301-777-3313', 'twitter': '@teganandsara', 'github': '@heartthrob'}
-}
-
 # Goal 1: Loop through that dictionary to print out everyone's contact information.
 
 # Sample output:
@@ -17,9 +11,21 @@ contacts = {
 # Shannon's contact information is:
 #   Phone: 202-555-1234
 #   Twitter: @svt827
-#   Github: @shannonturner 
+# Github: @shannonturner
 
 # Beyonce's contact information is:
 #   Phone: 303-404-9876
 #   Twitter: @beyonce
 #   Github: @bey
+
+contacts = {
+
+'Shannon': {'phone': '202-555-1234', 'twitter': '@svt827', 'github': '@shannonturnet' },
+'Anupama': {'phone': '410-333-9876', 'twitter': '@iamtheanupama', 'github': '@apillalamarri'},
+'Maite': {'phone': '202-000-0000', 'twitter': '@maits', 'github': '@maits'},
+'Lois': {'phone': '800-232-4500', 'twitter': '@lois', 'github': 'loisa'},
+}
+
+for contact,values in contacts.items():
+	print "\n" "\t" "{0}'s contact information is:" "\n" "\t" .format(contact) + "Phone:" + ' ' + values.values()[0] + "\n" "\t"  "Twitter:" + ' ' + values.values()[1] + "\n" "\t"  "GitHub:" + ' ' + values.values()[2] 
+
