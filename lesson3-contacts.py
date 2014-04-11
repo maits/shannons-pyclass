@@ -89,7 +89,7 @@ with open('contacts.html','w') as newfile:
 
 file_contacts = {}
 
-with open("contacts.csv",'r') as contacts_file: #I downloaded the CSV to my desktop
+with open("contacts.csv",'r') as contacts_file: #I downloaded the CSV to my desktop. This assumes both files are in the desktop.
 	contacts_string = contacts_file.read().split('\n')[1:]
 
 for contact in contacts_string:
