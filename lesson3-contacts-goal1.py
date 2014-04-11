@@ -80,4 +80,20 @@ for contact, info in contacts.items():
 	""".format(contact, info.get('phone'), info.get('twitter'), info.get('github'))
 	print html_string
 
+# Goal 3: Write all of the HTML out to a file called contacts.html and open it in your browser.
 
+with open('contacts.html','w') as newfile:
+	newfile.write(html_string)
+
+# Goal 4: Instead of reading in the contacts from the dictionary above, read them in from contacts.csv, which you can find in lesson_07_(files).
+
+file_contacts = {}
+
+with open("contacts.csv",'r') as contacts_file: #I downloaded the CSV to my desktop
+	contacts_string = contacts_file.read().split('\n')[1:]
+
+for contact in contacts_string:
+	contactlist = contact.split(',')
+	file_contacts[contactlist[0]]={'phone' : contactlist[1], 'twitter' : contactlist[2], 'github' : contactlist[3]}
+
+#this doesn't work. It gives me an Index Error - list index is out of range 
