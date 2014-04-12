@@ -48,4 +48,4 @@ with open("state_info.csv", "r") as states_file:
 
 		new_file.write("</table>")
 
-##this doesn't work. It says that the list is out of range. I also need to pop the header/ 
+##this doesn't work. It says that the list is out of range. I also need to pop the header
