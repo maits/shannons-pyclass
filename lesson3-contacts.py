@@ -96,4 +96,4 @@ for contact in contacts_string:
 	contactlist = contact.split(',')
 	file_contacts[contactlist[0]]={'phone' : contactlist[1], 'twitter' : contactlist[2], 'github' : contactlist[3]}
 
-#this doesn't work. It gives me an Index Error - list index is out of range 
+#this doesn't work. It gives me an Index Error - list index is out of range. 
