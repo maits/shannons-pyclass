@@ -25,19 +25,27 @@ with open("states.txt", "r") as states_file:
 
 	#	new_file.write("</select>")
 
-#this is the html template from states ex2 I used to write this one
+#Challenge 3 and 4
 
-#StateNames = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
-#StateAbbreviations = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY']
+with open("state_info.csv", "r") as states_file:
+	states = states_file.read().split("\n")
 
-#print '<select>'
-#for StateAbbreviation, StateName in zip(StateAbbreviations, StateNames):
-#	print '\t<option value="{0}">{1}</option>'.format(StateAbbreviation, StateName)
-#print '</select>'
+#	print states
 
-#for state in states:
-#	print '<select><option value="state_abbreviation">'
-#	print state
-#	print '</option></select>'
+	for index, state in enumerate(states):
+		states[index] = state.split("\t")
 
-#this doesn't work. It says that list is out of range. I need to pop the headers and fix the split 
+#	print states
+
+	with open("states1.html", "w") as new_file:		
+		new_file.write("<table border='1'>")
+		
+
+#
+		for state in states:
+	
+			new_file.write("\t <tr><td colspan='2'>{1}</td></tr><tr><td>Rank: {0}</td><td> Percent: {4}% </td></tr><tr><td> US House Members: {3}</td><td>Population: {2}</td></tr>".format(state[1], state[0], state[4], state[3], state[2]))
+
+		new_file.write("</table>")
+
+##this doesn't work. It says that the list is out of range. I also need to pop the header/ 
