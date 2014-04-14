@@ -39,8 +39,18 @@ with open("state_info.csv", "r") as states_file:
 
 	with open("states1.html", "w") as new_file:		
 		new_file.write("<table border='1'>")
+	
 
-#when I run this code, ot says the index list is out of range.
+
+	for state in states:
+	
+		new_file.write("\t <tr><td colspan='2'>{1}</td></tr><tr><td>Rank: {0}</td><td> Percent: {4}% </td></tr><tr><td> US House Members: {3}</td><td>Population: {2}</td></tr>".format(state[1], state[0], state[4], state[3], state[2]))
+
+	new_file.write("</table>")
+
+##this doesn't work. It says that the list is out of range. I also need to pop the header
+
+
 
 #I took this code from Morgana's Github
 
@@ -76,13 +86,4 @@ with open('states_info_full.html', 'w') as population_file:
 #http://www.daniweb.com/software-development/python/threads/88437/list-index-out-of-range
 
 
-		
-
-#
-		for state in states:
 	
-			new_file.write("\t <tr><td colspan='2'>{1}</td></tr><tr><td>Rank: {0}</td><td> Percent: {4}% </td></tr><tr><td> US House Members: {3}</td><td>Population: {2}</td></tr>".format(state[1], state[0], state[4], state[3], state[2]))
-
-		new_file.write("</table>")
-
-##this doesn't work. It says that the list is out of range. I also need to pop the header
