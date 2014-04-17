@@ -15,6 +15,5 @@ print greeting
 #writing the same thing as a function 
 
 def greeting(name):
-    name = "Shannon"
-    print "Hello again,", name 
+    print "Hello,", name 
 greeting("Shannon")
