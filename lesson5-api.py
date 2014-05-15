@@ -50,10 +50,11 @@ for title in response:
 for title in response:
 	if len(title) == 7:
 		print "This is a movie ID, not the title."
-		bt_title = requests.get('http://bechdeltest.com/api/v1/getMovieByImdbId', params= {'imdbid' : usermovie}).json()
+		bt_title = requests.get('http://bechdeltest.com/api/v1/getMovieByImdbId', params= {'imdbid' : title}).json()
 	else:
-		bt_title = requests.get('http://bechdeltest.com/api/v1/getMoviesByTitle', params={'title' : usermovie}).json()
+		bt_title = requests.get('http://bechdeltest.com/api/v1/getMoviesByTitle', params={'title' : title}).json()
 		print "This is the movie you're looking for."
+		print bt_title
 
 #I need to check the last part - http://stackoverflow.com/questions/6462949/how-do-you-find-imdb-movie-id
 #other useful links: https://github.com/ElizabethAB/PlaytimeExercises/blob/master/lesson05_firstapi.py
