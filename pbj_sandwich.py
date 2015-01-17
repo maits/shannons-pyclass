@@ -13,7 +13,6 @@ else:
 	print "Looks like you don't have a lunch today"
 
 # Second Goal: Modify that program to tell you: if you can make a sandwich, how many you can make
-# Secong Goal doesn't work. Trying to figure it out. 
 
 
 if var_bread >= 2 and var_peanutbutter >= 1 and var_jelly >= 1:
